@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            overflow-x: hidden;
+            background-image: url("/Public/images/bgimage3.jpeg");
+            background-size: cover;
+            font-weight: bold;
+        }
+        
+        .top {
+            color: #FFFFFF;
+            display: flex;
+            float: right;
+            gap: 30px;
+            background-color: #033249;
+            font-size: x-large;
+            height: 100px;
+            padding-right: 15px;
+            padding-left: 100%;
+            margin: -8px;
+            margin-bottom: 10px;
+            align-items: center;
+            padding-top: 11px;
+            overflow-x: hidden;
+        }
+        
+        .top1:hover {
+            color: #ff7a00;
+        }
+        
+        .icon {
+            float: left;
+            padding-right: 780px;
+            margin-top: -5px;
+        }
+        
+        .firstpic {
+            margin-top: -10px;
+            background-image: url("/Public/images/bgimage5.jpg");
+            width: 100%;
+            background-size: cover;
+            height: 90vh;
+            background-attachment: fixed;
+        }
+        
+        .picture_5 {
+            margin: 10px;
+            border-radius: 2.5%;
+            width: 46%;
+        }
+        
+        .picture_6 {
+            margin: 10px;
+            border-radius: 2.5%;
+            width: 43%;
+            position: relative;
+            left: 800px;
+        }
+        
+        .picture_7 {
+            border-radius: 2.5%;
+            width: 48%;
+            position: relative;
+            left: 650px;
+            margin-bottom: 400px;
+        }
+        
+        .text1 {
+            text-align: center;
+            margin-right: 15%;
+            margin-left: 15%;
+            font-size: x-large;
+            color: #5892b3;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        
+        h1 {
+            float: right;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin-right: 200px;
+        }
+        
+        h4 {
+            float: left;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            position: relative;
+            bottom: 400px;
+            margin-left: 130px;
+            font-size: 30px;
+        }
+        
+        h2 {
+            margin-right: 200px;
+        }
+        
+        h3 {
+            text-align: center;
+            font-size: 40px;
+            color: cadetblue;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        
+        .relsite1 {
+            float: left;
+            padding-top: 75px;
+            color: brown;
+        }
+        
+        .relsite {
+            float: right;
+            padding-top: 75px;
+        }
+        
+        .para {
+            float: right;
+            position: relative;
+            bottom: 330px;
+            font-size: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin-right: 10px;
+            right: 30px;
+        }
+        
+        .para1 {
+            float: left;
+            position: relative;
+            bottom: 400px;
+            font-size: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin-right: 400px;
+            margin-left: 20px;
+            left: 35px;
+        }
+        
+        .para2 {
+            float: right;
+            position: relative;
+            bottom: 330px;
+            font-size: 17px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin-left: 60px;
+            position: relative;
+            left: px
+        }
+        
+        .extra_class {
+            padding-left: 30px;
+        }
+        
+        .wspc1 {
+            position: relative;
+            bottom: 400px;
+            height: 0%;
+            background-color: thistle;
+        }
+        
+        .wspc2 {
+            background-color: blueviolet;
+            height: 0%;
+        }
+        
+        .single {
+            margin: 10px;
+            border-radius: 2.5%;
+            width: 46%;
+            vertical-align: middle;
+            float: right;
+            position: relative;
+            bottom: 200px;
+            right: 750px;
+        }
+        
+        .single1 {
+            margin: 10px;
+            border-radius: 2.5%;
+            width: 46%;
+            vertical-align: middle;
+            float: right;
+            position: relative;
+            top: -280px;
+            right: 750px;
+        }
+        
+        .second {
+            position: relative;
+            top: -150px;
+            left: 700px;
+            font-size: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin-right: 30px;
+            display: flex;
+        }
+        
+        .second1 {
+            position: relative;
+            top: -200px;
+            left: 700px;
+            font-size: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin-right: 30px;
+            display: flex;
+        }
+        
+        h5 {
+            position: relative;
+            font-size: 26px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            display: flex;
+            width: max-content;
+            right: -400px;
+            top: -12px;
+        }
+        
+        h6 {
+            position: relative;
+            font-size: 26px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            display: flex;
+            width: max-content;
+            left: 180px;
+            bottom: 300px;
+        }
+        
+        h8 {
+            position: relative;
+            font-size: 26px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            display: flex;
+            width: max-content;
+            left: 950px;
+            bottom: 250px;
+        }
+        
+        .third {
+            position: relative;
+            top: 80px;
+            width: 45%;
+            height: 50%;
+            margin: 10px;
+            border-radius: 2.5%;
+            float: right;
+            left: 675px;
+        }
+        
+        .fourth {
+            position: relative;
+            bottom: 320px;
+            font-size: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin-left: 20px;
+            margin-right: 10px;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #FFFFFF;
+        }
+        
+        .footer {
+            background-color: #467181;
+            height: 300px;
+            margin: -7px;
+        }
+        
+        .foot1 {
+            font-size: 20px;
+            display: flex;
+            gap: 12%;
+            padding-left: 50px;
+            margin-top: 205px;
+            font-style: Redrose;
+            width: 1380px
+        }
+        
+        .foot2 {
+            font-size: 18px;
+            color: black;
+            padding-left: 50px;
+        }
+        
+        .foot3 {
+            font-size: 18px;
+            color: black;
+            margin-left: 300px;
+            top: -155px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .foot4 {
+            font-size: 18px;
+            color: black;
+            margin-left: 630px;
+            top: -270px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .foot5 {
+            font-size: 18px;
+            color: black;
+            margin-left: 915px;
+            top: -310px;
+            position: relative;
+            z-index: 3;
+        }
+        
+        .foot6 {
+            font-size: 18px;
+            color: black;
+            margin-left: 1250px;
+            top: -425px;
+            position: relative;
+            z-index: 4;
+        }
+        
+        .foot7 {
+            margin-left: 1150px;
+            top: -420px;
+            position: relative;
+            z-index: 5;
+            display: flex;
+        }
+        
+        .f0 {
+            border-radius: 10px;
+        }
+        
+        .f1 {
+            border-radius: 10px;
+        }
+        
+        .f2 {
+            border-radius: 10px;
+        }
+        
+        .f3 {
+            border-radius: 10px;
+        }
+        
+        .black {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top">
+        <div class="icon">
+            <a href="Home2.html"><img src="/Public/images/icon.png" height="100px"></a>
+        </div>
+
+        <p class="top1">Explore</p>
+        <p class="top1">Offers</p>
+        <a href="Accomodation.html">
+            <p class="top1">Accommodation</p>
+        </a>
+        <p class="top1">MyAccount</p>
+
+    </div>
+
+    <div class=firstpic>
+
+    </div>
+    </div>
+    <div>
+        <h3>Beaches</h3>
+
+        <p class="text1">The Goa that we hear about – sizzling nightlife, hippie markets, and the glitz & glamor – is, in fact, North Goa. The more explored and frequently-visited coastline of Goa is the stretch to the North of Fort Aguada up to the borders of Maharashtra.</p>
+    </div>
+    <div>
+        <div class="bg2">
+            <img src="/Public/images//baga_beach.jpg" width="20%" height="400px" class="picture_5">
+
+
+            <h1>BAGA BEACH</h1>
+            <div class="para">
+
+                <p1>Baga beach which is situated in North Goa is one of the favorite hangouts for <br>nature enthusiasts, where one can relish the scenic beauty of a place.<br>Watersports are the major attraction of Baga Beach.One can also go for <br>dolphin
+                    spotting tours and island trips from the beach. It has also got <br>the best nightlife scenes in Goa.The best time to visit Baga Beach is between <br>October and March when the weather is pleasant and parties are held almost <br>every
+                    night at the beach.</p1>
+
+                <br>
+                <br> Architectural style: Baroque architecture
+                <br> Opened: 1605
+                <br> Height: 18 m
+
+            </div>
+        </div>
+
+
+    </div>
+    <div>
+        <img src="/Public/images/beaches_3.jpeg" class="picture_6">
+
+        <h4>CALANGUTE BEACH</h4>
+        <div class="para1">
+
+            <p1>Among the most popular beaches for British tourists spending their holidays<br>in Goa,Calangute’s long strips of golden sand result in one of the most busie<br>st beaches in Goa. Encircled by palm and coconut trees, the beach is spread f<br>our
+                miles along the Arabian Sea and nine miles from the Panaji.So, if you want<br> an unstrained solitude, plan for Calangute beach holidays as it's a perfect<br> destination for beach bums.
+
+
+            </p1>
+
+        </div>
+
+    </div>
+
+
+
+    <img src="/Public/images/beaches_4.jpeg" class="single">
+
+    <h5>SINQUERIM BEACH</h5>
+    <div class="second">
+
+        <p1> Sinquerim Beach boasts an amazing shoreline and it is located north of the all popular<br> beaches of Goa. Sinquerim is popular among tourists flocking <br>from all over the world. One of the key attractions of Sinquerim Beach <br>is the popular
+            Sunburn Festival held each year in December. It is home<br> to many restaurants and shacks that serve fresh seafood and cocktails <br>to pamper your taste buds.<br>
+        </p1>
+
+    </div>
+
+    <img src="/Public/images/beaches_5.jpg" class="third">
+    <h6>ANJUNA BEACH</h6>
+    <div class="fourth">
+        <p1>This is the oldest and most famous mosques in Goa which was built in 1560 by <br>Ibrahim Adilshan of Bijapur. The star attraction of Safa Masjid is the huge laterite <br>stone masonry tank with turquoise waters located within the mosque complex.<br>            Many Mosques were destroyed during the Portuguese rule but this Safa Masjid <br>remained unharmed.According to V.T. Gune, the mosque was built in 1560 by the<br> Bijapuri ruler Ibrahim Adil Shah I about 2 km from center of Ponda.The mosque<br>            may be datable to the Adil shah period or even earlier.<br>
+            <br>
+            <br>
+            <br>
+            <br> Architectural style: Baroque architecture
+            <br> Opened: 1605
+            <br> Height: 18 m
+        </p1>
+    </div>
+    <img src="/Public/images/beaches_7.jpg" class="single1">
+
+    <h8>VAGATOR BEACH</h8>
+    <div class="second1">
+
+        <p1> Located in North Goa Vagator beach is a curved stretch of sand overlooked by the <br>Chapora Fort. The beach is dotted with a hillock on one side & headland on the other.<br>The beach itself is divided into two parts, Big Vagator & Little Vagator.
+            It is known<br> as the most photographed beach in Goa. November to March is the best time to<br> visit Vagator Beach to have the most fun.
+            <bR>
+            <br>
+            <br> Architectural style: Baroque architecture
+            <br> Opened: 1605
+            <br> Height: 18 m
+        </p1>
+
+    </div>
+
+
+    <div class="footer">
+        <div class="foot1">
+            <p>HOME</p>
+            <p>TERMS & POLICY</p>
+            <a href="abt.html" class="black">
+                <p>ABOUT US</p>
+            </a>
+            <p>CONTACT US</p>
+            <p>CONNECT WITH US</p>
+        </div>
+        <div class="foot2">
+            <p>Beaches</p>
+            <p>Entertainment</p>
+            <p>Religious Sites</p>
+            <p>Accommodation</p>
+        </div>
+        <div class="foot3">
+            <p>Privacy Policy</p>
+            <p>Cancellation Policy</p>
+            <p>FAQ'S</p>
+        </div>
+        <div class="foot4">
+            <p>About Volar</p>
+        </div>
+        <div class="foot5">
+            <p>Phone</p>
+            <p>E-mail</p>
+            <p>Site map</p>
+        </div>
+        <div class="foot6">
+
+        </div>
+        <div class="foot7">
+            <div>
+                <img class="f0" src="/Public/images/facebook_icon1.png" width="50%" height="70%">
+            </div>
+            <div>
+                <img class="f1" src="/Public/images/twitter_icon1.png" width="50%" height="70%">
+            </div>
+            <div>
+                <img class="f2" src="/Public/images/instagram_icon1.png" width="50%" height="70%">
+            </div>
+            <div>
+                <img class="f3" src="/Public/images/youtube_icon1.png" width="50%" height="70%">
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>

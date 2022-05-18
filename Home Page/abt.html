@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<style>
+    .navbar {
+        background-color: #033249;
+    }
+    
+    .navbar1 {
+        float: right;
+        display: flex;
+        color: #FFFFFF;
+        gap: 30px;
+        font-size: x-large;
+        align-items: center;
+        margin-right: 200px;
+    }
+    
+    .icon {
+        float: left;
+    }
+    
+    .text {
+        color: #c79d9d;
+        position: absolute;
+        bottom: 300px;
+        font-size: 50px;
+        font-style: Zilla Slab;
+        text-shadow: 8px 2px 2px #000000;
+        padding-left: 50px;
+    }
+    
+    .imagediv {
+        position: relative;
+        margin: -7px;
+    }
+    
+    .content {
+        background-color: #FF7A00;
+        margin-top: 6%;
+        margin-left: 9.7%;
+        width: 70%;
+        height: 500px;
+        padding-top: 70px;
+        padding-left: 80px;
+        padding-right: 80px;
+        font-size: 29px;
+        text-align: center;
+    }
+    
+    .down {
+        padding-top: 80px;
+    }
+    
+    .box {
+        background-color: #FFFFFF;
+        height: 70px;
+        width: 250px;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 29px;
+        margin: 80px 635px 100px;
+    }
+    
+    .align {
+        padding-top: 17px;
+    }
+    
+    .footer {
+        background-color: #467181;
+        height: 300px;
+        margin: -7px;
+    }
+    
+    .foot1 {
+        font-size: 20px;
+        display: flex;
+        gap: 13%;
+        padding-left: 50px;
+        padding-right: 25px;
+        padding-top: 20px;
+        font-style: Redrose;
+    }
+    
+    .foot2 {
+        font-size: 18px;
+        color: black;
+        padding-left: 50px;
+    }
+    
+    .foot3 {
+        font-size: 18px;
+        color: black;
+        margin-left: 300px;
+        top: -155px;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .foot4 {
+        font-size: 18px;
+        color: black;
+        margin-left: 630px;
+        top: -270px;
+        position: relative;
+        z-index: 2;
+    }
+    
+    .foot5 {
+        font-size: 18px;
+        color: black;
+        margin-left: 915px;
+        top: -310px;
+        position: relative;
+        z-index: 3;
+    }
+    
+    .foot6 {
+        font-size: 18px;
+        color: black;
+        margin-left: 1250px;
+        top: -425px;
+        position: relative;
+        z-index: 4;
+    }
+    
+    .foot7 {
+        margin-left: 1150px;
+        top: -420px;
+        position: relative;
+        z-index: 5;
+        display: flex;
+    }
+    
+    .f0 {
+        border-radius: 10px;
+    }
+    
+    .f1 {
+        border-radius: 10px;
+    }
+    
+    .f2 {
+        border-radius: 10px;
+    }
+    
+    .f3 {
+        border-radius: 10px;
+    }
+    
+    .column {
+        float: left;
+        width: 33.3%;
+        margin-bottom: 16px;
+        padding: 0 8px;
+    }
+    
+    @media screen and (max-width: 650px) {
+        .column {
+            width: 100%;
+            display: block;
+        }
+    }
+    
+    .row {
+        display: flex;
+    }
+    
+    .card {
+        box-shadow: 7px 5px 1px 0 rgba(0, 0, 0, 0.2);
+    }
+    
+    .container {
+        padding: 0 16px;
+    }
+    
+    .container::after,
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    
+    .title {
+        color: #FFFFFF;
+    }
+    
+    h2 {
+        color: #FFFFFF;
+    }
+    
+    .dropbtn {
+        color: #FFFFFF;
+        background-color: #033249;
+        padding: 16px;
+        font-size: x-large;
+        border: none;
+        cursor: pointer;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    
+    .dropbtn:hover {
+        color: #ff7a00;
+    }
+    
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .dropDown-content {
+        display: none;
+        position: absolute;
+        background-color: #033249;
+        width: 220px;
+        height: 250px;
+        padding-left: 7px;
+        margin-top: 10px;
+        z-index: 1;
+        margin-left: -60px;
+        box-shadow: 2px 2px 2px 5px black;
+    }
+    
+    .dropDown-content div {
+        color: #FFFFFF;
+        width: 180px;
+        margin-top: 5px;
+        padding: 12px 14px;
+        text-decoration: none;
+        transition: transform .1s;
+    }
+    
+    .dropDown-content div:hover {
+        box-shadow: 2px 2px 10px black;
+        transform: scale(1.05);
+    }
+    
+    .me {
+        display: flex;
+        margin-left: 1250px;
+        color: aliceblue;
+        gap: 50px;
+        padding-right: 700px;
+        padding-top: 9px;
+    }
+    
+    .show {
+        display: block;
+    }
+    
+    .button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: #033249;
+        background-color: #FFFFFF;
+        text-align: center;
+        cursor: pointer;
+        width: 60%;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    
+    .button:hover {
+        background-color: #FF7A00;
+        color: #FFFFFF;
+    }
+    
+    .top1:hover {
+        color: #ff9a00;
+    }
+    
+    a {
+        text-decoration: none;
+        color: white;
+    }
+</style>
+
+<body bgcolor="#033249">
+    <div class="navbar">
+        <a href="Home2.html"><img src="/Public/images/icon.png" class="icon"></a>
+
+        <div class="navbar1">
+
+            <p class="top1">Explore</p>
+            <a href="Accomodation.html">
+                <p class="top1">Accommodation</p>
+            </a>
+            <p class="top1">Contact us</p>
+
+        </div>
+        <div class="me">
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Profile</button>
+                <div id="myDropDown" class="dropDown-content">
+                    <div>Free Vouchers</div>
+                    <div>Covid Updates</div>
+                    <div>Terms and Conditions</div>
+                    <div>Settings</div>
+                    <div> <a href="Home.html">Sign Out</a> </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function myFunction() {
+                document.getElementById("myDropDown").classList.toggle("show");
+            }
+        </script>
+
+
+    </div>
+
+
+
+    <div class="imagediv">
+
+        <img src="/Public/images/abus1.jpeg" width="100%" height="500px">
+        <p class="text">ABOUT VOLAR</p>
+    </div>
+
+    <div class="content">
+        <p> Established in 2015, <b>Volar Tourism </b>had set it's remarkabale path in Goa tourism. We are well-known for making our customers trips more easier and pleasentable. We presented our customers with the best places to visit and chill in Goa. We
+            make sure that each one of you leaves with a bag full of memories with splendid adventures that reminds you of Goa in every trip.</p>
+
+        <b><p class="down">Not visited Goa yet? Let us take the pleasure to make your stay comfortable. Come on let's jump into the adventerous and joyful world that best suits you.</p></b>
+    </div>
+
+    <div class="box">
+        <p class="align">Our Team</p>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <img src="/Public/images/Nikitha.jpeg" alt="Nikitha" style="width:100%">
+                <div class="container">
+                    <h2>Nikitha</h2>
+                    <p class="title">CEO & Founder</p>
+
+                    <p class="title">nikithaundavalli@gmail.com</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <img src="/Public/images/Siva.jpeg" alt="Siva" style="width:100%">
+                <div class="container">
+                    <h2>Siva Edeti</h2>
+                    <p class="title">Co-Founder</p>
+
+                    <p class="title">sivaedeti@gmail.com</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <img src="/Public/images/Ayyappa.jpeg" alt="Ayyappa" style="width:100%">
+                <div class="container">
+                    <h2>Ayyappa</h2>
+                    <p class="title">Chief Marketing Officer</p>
+
+                    <p class="title">ayyappareddy@gmail.com</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="foot1">
+            <p>HOME</p>
+            <p>TERMS & POLICY</p>
+            <p>ABOUT US</p>
+            <p>CONTACT US</p>
+            <p>CONNECT WITH US</p>
+        </div>
+        <div class="foot2">
+            <p>Beaches</p>
+            <p>Entertainment</p>
+            <p>Religious Sites</p>
+            <p>Accommodation</p>
+        </div>
+        <div class="foot3">
+            <p>Privacy Policy</p>
+            <p>Cancellation Policy</p>
+            <p>FAQ'S</p>
+        </div>
+        <div class="foot4">
+            <p>About Volar</p>
+        </div>
+        <div class="foot5">
+            <p>Phone</p>
+            <p>E-mail</p>
+            <p>Site map</p>
+        </div>
+
+        <div class="foot7">
+            <div>
+                <img class="f0" src="/Public/images/facebook_icon1.png" width="50%" height="70%">
+            </div>
+            <div>
+                <img class="f1" src="/Public/images/twitter_icon1.png" width="50%" height="70%">
+            </div>
+            <div>
+                <img class="f2" src="/Public/images/instagram_icon1.png" width="50%" height="70%">
+            </div>
+            <div>
+                <img class="f3" src="/Public/images/youtube_icon1.png" width="50%" height="70%">
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

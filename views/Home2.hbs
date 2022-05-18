@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one {
+            color: #FFFFFF;
+            display: flex;
+            float: right;
+            gap: 30px;
+            background-color: #033249;
+            font-size: x-large;
+            height: 100px;
+            align-items: center;
+            padding-right: 15px;
+        }
+        
+        .firstpic {
+            border: none;
+            background-image: url("/images/firstpic.jpg");
+            background-size: cover;
+            font-size: xx-large;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            width: 100%;
+            height: 80vh;
+            background-attachment: fixed;
+        }
+        
+        .firstpic h1 {
+            position: absolute;
+            top: 40%;
+            left: 40%;
+            /* background-color: rgb(135, 206, 235, 0.5); */
+            padding: 8px;
+        }
+        
+        .goa {
+            background-color: #FF7A00;
+            width: 40%;
+            font-size: x-large;
+            height: 500px;
+            margin-left: 80px;
+            padding-top: 3px;
+            padding-left: 50px;
+            margin-top: 50px;
+            padding-right: 170px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        
+        .secpic {
+            margin-left: 750px;
+            margin-top: -450px;
+        }
+        
+        .text {
+            font-size: xx-large;
+            text-align: center;
+            margin-top: 70px;
+            color: #FFFFFF;
+        }
+        
+        .thirdpic {
+            padding-left: 6%;
+        }
+        
+        .fourthpic {
+            padding-left: 6%;
+        }
+        
+        .fifthpic {
+            padding-left: 6%;
+        }
+        
+        .knowmore {
+            background-color: #202011;
+            margin-top: 2%;
+            opacity: 50%;
+            text-align: top;
+            color: #FFFFFF;
+            padding-bottom: 3%;
+            display: flex;
+        }
+        
+        .km1 {
+            width: 25%;
+            margin-left: 90px;
+            padding-top: 40px;
+            font-size: larger;
+        }
+        
+        .km2 {
+            margin-top: 40px;
+            margin-left: 90px;
+            font-size: larger;
+            width: 25%;
+        }
+        
+        .km3 {
+            width: 25%;
+            margin-left: 90px;
+            font-size: larger;
+            margin-top: 40px;
+        }
+        
+        .text2 {
+            font-size: 40px;
+            color: #FFFFFF;
+            text-align: center;
+        }
+        
+        .sixthpic {
+            margin-bottom: 10%;
+            padding-bottom: 10%;
+            opacity: 70%;
+            z-index: -1;
+        }
+        
+        .sevenpic {
+            float: right;
+            margin-top: -1030px;
+            z-index: 0;
+            opacity: 50%;
+            
+        }
+        
+        .goa1 {
+            float: right;
+        }
+        
+        .last {
+            height: 110px;
+        }
+        
+        p1:hover {
+            color: #FF7A00;
+            background-color: none;
+        }
+        
+        .footer {
+            background-color: #467181;
+            height: 300px;
+            margin: -7px;
+        }
+        
+        .foot1 {
+            font-size: 20px;
+            display: flex;
+            gap: 13%;
+            padding-left: 50px;
+            padding-right: 25px;
+            padding-top: 20px;
+            font-style: Redrose;
+        }
+        
+        .foot2 {
+            font-size: 18px;
+            color: black;
+            padding-left: 50px;
+        }
+        
+        .foot3 {
+            font-size: 18px;
+            color: black;
+            margin-left: 300px;
+            top: -155px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .foot4 {
+            font-size: 18px;
+            color: black;
+            margin-left: 630px;
+            top: -270px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .foot5 {
+            font-size: 18px;
+            color: black;
+            margin-left: 915px;
+            top: -310px;
+            position: relative;
+            z-index: 3;
+        }
+        
+        .foot6 {
+            font-size: 18px;
+            color: black;
+            margin-left: 1250px;
+            top: -425px;
+            position: relative;
+            z-index: 4;
+        }
+        
+        .foot7 {
+            margin-left: 1150px;
+            top: -420px;
+            position: relative;
+            z-index: 5;
+            display: flex;
+        }
+        
+        .f0 {
+            border-radius: 10px;
+        }
+        
+        .f1 {
+            border-radius: 10px;
+        }
+        
+        .f2 {
+            border-radius: 10px;
+        }
+        
+        .f3 {
+            border-radius: 10px;
+        }
+        
+        .moretext {
+            visibility: hidden;
+        }
+        
+        .kn1,
+        .km2,
+        .km3 {
+            cursor: pointer;
+        }
+        
+        button {
+            background-color: #033249;
+            width: 10%;
+            height: 5vh;
+            border-radius: 7px;
+            box-shadow: darkcyan;
+            font-size: 18px;
+            cursor: pointer;
+            position: absolute;
+            left: 360px;
+            top: 1230px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: white;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #FFFFFF;
+        }
+        
+        .black {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+
+</head>
+
+<body bgcolor="#033249">
+    {{>nav}}
+    <div class=firstpic>
+        <h1><span class="auto-input"></span></h1>
+    </div>
+    <div class=goa>
+        <h4 align=center>GOA</h4>
+        <p class="text">
+            <center>Goa is a famous tourist spot in India because of its dazzling nightlife that never ends.
+                <span class="moretext">
+                    This city offers amazing, and exciting nightlife that starts from
+                    nightclubs, bars, beach shacks, and more with non-stop music, latest songs, perfect
+                    ambiance, dizzy neon lights, delectable food, and fancy drinks. Goa developed an international reputation
+                    in the 1960s as one of the prime stops on the legendary India-Nepal "hippie trail".
+                </span>
+                <button class="btn-read-more">Read More</button>
+            </center>
+        </p>
+
+    </div>
+    <div class="secpic">
+        <img src="/images/secpic.jpg">
+
+    </div>
+
+
+    <div class="text">
+        <p>Explore Goa before you go!!!</p>
+    </div>
+    <div class="major">
+        <a href="Beaches1.html"><img class="thirdpic" src="/images/thirdpic.jpg" width="25%" height="562px"></a>
+        <a href="Entertaiment.html"><img class="fourthpic" src="/images/fourthpic.jpg" width="26%" height="562px"></a>
+        <a href="Religious Sites/Religious_sites.html"><img class="fifthpic" src="/images/fifthpic.jpeg" width="25%" height="562px"></a>
+    </div>
+    <div class="knowmore">
+        <div class="km1">
+            <p>Sunshine is the best medicine. An ocean breeze puts a mind at ease. We dream in colors borrowed from the sea. May you always have a shell in your pocket and sand in your shoes.</p>
+            <p class="kn1">KNOW MORE+</p>
+        </div>
+        <div class="km2">
+            <p>The world is a stage, the stage is a world of entertainment. Avoiding danger is no safer in the long run than outright exposure. Life is either a daring adventure or nothing</p>
+            <br>
+            <pclass="kn1">KNOW MORE+</p>
+        </div>
+        <div class="km3">
+            <p>Those who understand the eternal blessings which come from the temple know that no sacrifice is too great, no price too heavy, no struggle too difficult in order to receive those blessings.</p>
+            <pclass="kn1">KNOW MORE+</p>
+        </div>
+    </div>
+    <div class="text2">
+        <p>Go on, pick the best Package that suits you!!</p>
+    </div>
+    <div class="sixthpic">
+        <a href="packages.html"><img src="/images/sixthpic.jpeg" width="100%" height="725px"></a>
+    </div>
+    <div>
+
+        <img class="sevenpic" src="/images/sevenpic.png" width="60%" height="750px">
+
+    </div>
+    </div>
+
+    <div class="last" width="100%">
+
+    </div>
+    <div class="footer">
+        <div class="foot1">
+            <p>HOME</p>
+            <p>TERMS & POLICY</p>
+            <a href="abt.html" class="black">
+                <p>ABOUT US</p>
+            </a>
+            <p>CONTACT US</p>
+            <p>CONNECT WITH US</p>
+        </div>
+        <div class="foot2">
+            <p>Beaches</p>
+            <p>Entertainment</p>
+            <p>Religious Sites</p>
+            <p>Accommodation</p>
+        </div>
+        <div class="foot3">
+            <p>Privacy Policy</p>
+            <p>Cancellation Policy</p>
+            <p>FAQ'S</p>
+        </div>
+        <div class="foot4">
+            <p>About Volar</p>
+        </div>
+        <div class="foot5">
+            <p>Phone</p>
+            <p>E-mail</p>
+            <p>Site map</p>
+        </div>
+        <div class="foot6">
+
+        </div>
+        <div class="foot7">
+            <div>
+                <img class="f0" src="/images/facebook_icon1.png" width="50%" height="70%">
+            </div>
+            <div>
+                <img class="f1" src="/images/twitter_icon1.png" width="50%" height="70%">
+            </div>
+            <div>
+                <img class="f2" src="/images/instagram_icon1.png" width="50%" height="70%">
+            </div>
+            <div>
+                <img class="f3" src="/images/youtube_icon1.png" width="50%" height="70%">
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+    var typed = new Typed(".auto-input", {
+        strings: ["Goa,India", "Have Fun", "Have Chill"],
+        typeSpeed: 100,
+        backSpeed: 100,
+        loop: true
+    })
+</script>
+<script>
+    let btn = document.querySelector(".btn-read-more");
+    let text = document.querySelector(".moretext");
+    btn.addEventListener("click", () => {
+        if (btn.innerText === "Read More") {
+            btn.innerText = "Read Less";
+            text.style.visibility = "visible";
+        } else {
+            btn.innerText = "Read More";
+            text.style.visibility = "hidden";
+        }
+    })
+    var redirect = document.querySelector('.kn1');
+    redirect.addEventListener('click', () => {
+        if (confirm("You will be redirected to another website")) {
+            window.location.href = "https://www.planetware.com/india/best-beaches-in-goa-ind-1-30.htm"
+        }
+
+    })
+    var redirect = document.querySelector('.km2');
+    redirect.addEventListener('click', () => {
+        if (confirm("You will be redirected to another website")) {
+            window.location.href = "https://www.planetware.com/india/best-beaches-in-goa-ind-1-30.htm"
+        }
+
+    })
+    var redirect = document.querySelector('.km3');
+    redirect.addEventListener('click', () => {
+        if (confirm("You will be redirected to another website")) {
+            window.location.href = "https://www.planetware.com/india/best-beaches-in-goa-ind-1-30.htm"
+        }
+
+    })
+</script>
+
+</html>

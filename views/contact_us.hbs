@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.5;
+        }
+        
+        .contact-bg {
+            height: 80vh;
+            background-image: url("/images/contact\ pic1.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 190vh;
+            height: 500px;
+            text-align: center;
+            color: rgb(0, 0, 0);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .contact-bg h3 {
+            font-size: 1.3rem;
+            font-weight: 400;
+        }
+        
+        .contact-bg h2 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            padding: 0.4rem 0;
+            letter-spacing: 4px;
+        }
+        
+        .line div {
+            margin: 0 0.2rem;
+        }
+        
+        .line div:nth-child(1),
+        .line div:nth-child(3) {
+            height: 3px;
+            width: 70px;
+            background: rgb(0, 0, 0);
+            border-radius: 5px;
+        }
+        
+        .line {
+            display: flex;
+            align-items: center;
+        }
+        
+        .line div:nth-child(2) {
+            width: 10px;
+            height: 10px;
+            background: rgb(0, 0, 0);
+            border-radius: 50%;
+        }
+        
+        .text {
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        .contact-bg .text {
+            margin: 1.6rem 0;
+        }
+        
+        .contact-body {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .contact-info {
+            margin: 2rem 0;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        .contact-info span {
+            display: block;
+        }
+        
+        .contact-info div {
+            margin: 0.8rem 0;
+            padding: 1rem;
+        }
+        
+        .contact-info span .fas {
+            font-size: 2rem;
+            padding-bottom: 0.9rem;
+            color: black;
+        }
+        
+        .contact-info div span:nth-child(2) {
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+        
+        .contact-info .text {
+            padding-top: 0.4rem;
+        }
+        
+        .contact-form {
+            padding: 2rem 0;
+            border-top: 1px solid #c7c7c7;
+        }
+        
+        .contact-form form {
+            padding-bottom: 1rem;
+        }
+        
+        .form-control {
+            width: 100%;
+            border: 1.5px solid #c7c7c7;
+            border-radius: 5px;
+            padding: 0.7rem;
+            margin: 0.6rem 0;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+            outline: 0;
+        }
+        
+        .form-control:focus {
+            box-shadow: 0 0 6px -3px rgba(48, 48, 48, 1);
+        }
+        
+        .contact-form form div {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 0.6rem;
+        }
+        
+        .send-btn {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+            text-transform: uppercase;
+            color: #fff;
+            background: black;
+            border: none;
+            border-radius: 5px;
+            padding: 0.7rem 1.5rem;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+        
+        .send-btn:hover {
+            opacity: 0.8;
+        }
+        
+        .contact-form>div img {
+            width: 85%;
+        }
+        
+        .contact-form>div {
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .contact-footer {
+            padding: 2rem 0;
+            background: #000;
+        }
+        
+        .contact-footer h3 {
+            font-size: 1.3rem;
+            color: #fff;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .social-links a {
+            text-decoration: none;
+            width: 40px;
+            height: 40px;
+            color: #fff;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0.4rem;
+            transition: all 0.4s ease;
+        }
+        
+        .social-links a:hover {
+            color: #f7327a;
+            border-color: #f7327a;
+        }
+        
+        @media screen and (min-width: 768px) {
+            .contact-bg .text {
+                width: 70%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .contact-info {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media screen and (min-width: 992px) {
+            .contact-bg .text {
+                width: 50%;
+            }
+            .contact-form {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                align-items: center;
+            }
+        }
+        
+        @media screen and (min-width: 1200px) {
+            .contact-info {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        .nav-bar {
+            background-color: white;
+            background-color: #033249;
+            color: #2978b5;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px;
+        }
+        
+        .nav-heading {
+            margin: 0px;
+            letter-spacing: 2px;
+            font-weight: 300;
+            color: white;
+        }
+        
+        .nav-bar-items {
+            display: flex;
+            width: 600px;
+            justify-content: space-between;
+            list-style-type: none;
+            padding-right: 20px;
+        }
+        
+        .nav-bar-links {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+        
+        .footer {
+            background-color: #467181;
+            height: 300px;
+            margin: -7px;
+            margin-top: 30px;
+        }
+        
+        .foot1 {
+            font-size: 20px;
+            display: flex;
+            gap: 13%;
+            padding-left: 50px;
+            padding-right: 25px;
+            padding-top: 20px;
+            font-style: Redrose;
+        }
+        
+        .foot2 {
+            font-size: 18px;
+            color: black;
+            padding-left: 50px;
+        }
+        
+        .foot3 {
+            font-size: 18px;
+            color: black;
+            margin-left: 300px;
+            top: -155px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .foot4 {
+            font-size: 18px;
+            color: black;
+            margin-left: 630px;
+            top: -270px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .foot5 {
+            font-size: 18px;
+            color: black;
+            margin-left: 915px;
+            top: -310px;
+            position: relative;
+            z-index: 3;
+        }
+        
+        .foot6 {
+            font-size: 18px;
+            color: black;
+            margin-left: 1250px;
+            top: -425px;
+            position: relative;
+            z-index: 4;
+        }
+        
+        .foot7 {
+            margin-left: 1150px;
+            top: -420px;
+            position: relative;
+            z-index: 5;
+            display: flex;
+        }
+        
+        .f0 {
+            border-radius: 10px;
+        }
+        
+        .f1 {
+            border-radius: 10px;
+        }
+        
+        .f2 {
+            border-radius: 10px;
+        }
+        
+        .f3 {
+            border-radius: 10px;
+        }
+        
+        .black {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="nav-bar">
+        <h1 class="nav-heading"><img src="/images/icon.png" alt=""></h1>
+        <div>
+            <ul class="nav-bar-items">
+                <a href="/" class="nav-bar-links">
+                    <li>Home</li>
+                </a>
+                <a href="/Accomodation" class="nav-bar-links">
+                    <li>Accomodation</li>
+                </a>
+                <a href="/offers" class="nav-bar-links">
+                    <li>Offers</li>
+                </a>
+                <a href="/Packages" class="nav-bar-links">
+                    <li>Packages</li>
+                </a>
+                <a href="/login" class="nav-bar-links">
+                    <li>Login</li>
+                </a>
+            </ul>
+        </div>
+    </div>
+
+    <section class="contact-section">
+        <div class="contact-bg">
+            <h3>Get in Touch with Us</h3>
+            <h2>Contact Us</h2>
+            <div class="line">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <p class="text">We are Here to Help you<br /> Just a click away </p>
+        </div>
+
+        <div class="contact-body">
+            <div class="contact-info">
+                <div>
+                    <span><i class="fas fa-mobile-alt"></i></span>
+                    <span>Phone No.</span>
+                    <span class="text">7563462365</span>
+                </div>
+                <div>
+                    <span><i class="fas fa-envelope-open"></i></span>
+                    <span>E-mail</span>
+                    <p class="text"><a style="text-decoration: none;" href="mailto:sivaedeti@gmail.com">sivaedeti@gmail.com</a></p>
+                </div>
+                <div>
+                    <span><i class="fas fa-map-marker-alt"></i></span>
+                    <span>Address</span>
+                    <address><span class="text">5-15, sector 56,<br>Opposite Old Marg Tower,<br>Gurgaon </span></address>
+                </div>
+                <div>
+                    <span><i class="fas fa-clock"></i></span>
+                    <span>Opening Hours</span>
+                    <span class="text">We are available 24 / 7 </span>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <form action="javascript:sendmail()" method="post">
+                    <div>
+                        <h4>Please Fill Out Your Details Here</h4><br />
+                    </div>
+                    <div>
+                        <input type="text" name="Name" id="Name" class="form-control" placeholder="Enter your Name">
+                        <input type="text" name="Subject" id="Subject" class="form-control" placeholder="Enter your subject">
+                    </div>
+                    <div>
+                        <input type="email" name="Sender" id="Sender" class="form-control" placeholder="E-mail">
+                        <input type="text" name="Phone" id="Phone" pattern="[0-9]{10}" class="form-control" placeholder="Phone">
+                    </div>
+                    <textarea rows="5" placeholder="Message" name="Message" id="Message" class="form-control"></textarea>
+                    <input type="submit" class="send-btn" value="send message" onclick="Redirect()" ;>
+                </form>
+
+                <div>
+                    <img src="image/contact-png.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="map">
+            <iframe src="https://www.google.com/maps/d/embed?mid=10DxB2n1EU0KYQZxYDoHuX-vqw5U&ehbc=2E312F"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <div class="footer">
+            <div class="foot1">
+                <p>HOME</p>
+                <p>TERMS & POLICY</p>
+                <a href="abt.html" class="black">
+                    <p>ABOUT US</p>
+                </a>
+                <p>CONTACT US</p>
+                <p>CONNECT WITH US</p>
+            </div>
+            <div class="foot2">
+                <p>Beaches</p>
+                <p>Entertainment</p>
+                <p>Religious Sites</p>
+                <p>Accommodation</p>
+            </div>
+            <div class="foot3">
+                <p>Privacy Policy</p>
+                <p>Cancellation Policy</p>
+                <p>FAQ'S</p>
+            </div>
+            <div class="foot4">
+                <p>About Volar</p>
+            </div>
+            <div class="foot5">
+                <p>Phone</p>
+                <p>E-mail</p>
+                <p>Site map</p>
+            </div>
+            <div class="foot6">
+
+            </div>
+            <div class="foot7">
+                <div>
+                    <img class="f0" src="/images/facebook_icon1.png" width="50%" height="70%">
+                </div>
+                <div>
+                    <img class="f1" src="/images/twitter_icon1.png" width="50%" height="70%">
+                </div>
+                <div>
+                    <img class="f2" src="/images/instagram_icon1.png" width="50%" height="70%">
+                </div>
+                <div>
+                    <img class="f3" src="/images/youtube_icon1.png" width="50%" height="70%">
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script>
+        function Redirect() {
+            setTimeout(function() {
+                window.location = "http://localhost:3001/";
+            }, 2000);
+        }
+
+        function sendmail() {
+
+            var name = $('#Name').val();
+            var email = $('#Sender').val();
+            var subject = $('#Subject').val();
+            var message = $('#Message').val();
+            var body = $('#Phone').val();
+
+            var Body = 'Name: ' + name + '<br>Email: ' + email + '<br>Subject: ' + subject + '<br>Phone: ' + body + '<br>Message: ' + message;
+
+
+            Email.send({
+                SecureToken: "fbf31702-bb7f-4a4e-9c1c-4ccf17ee777f",
+                To: 'sivaedeti@gmail.com',
+                From: "nikithaundavalli@gmail.com",
+                Subject: "New message on contact from " + name,
+                Body: Body
+            }).then(
+                message => {
+
+                    if (message == 'OK') {
+                        alert('Your mail has been send. Thank you for connecting.');
+                    } else {
+                        console.error(message);
+                        alert('There is error at sending message. ')
+
+                    }
+
+                }
+            );
+
+
+
+        }
+    </script>
+    </script>
+
+
+</body>
+
+</html>

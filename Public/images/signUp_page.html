@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .main_div{
+            background-color: #FFFFFF;
+            height: 600px;
+            width: 450px;
+            margin: 65px 525px;
+            border-radius: 20px;
+            position: relative;
+        }
+
+        .log{
+            color: #033249;
+            text-align: center;
+            font-size: x-large;
+            position: absolute;
+            top: 20px;
+            left: 42%;
+            font-weight: bold;
+        }
+
+        .Sign_Up{
+            position: absolute;
+            top: 100px;
+            left:20px;
+            color: #033249;
+            font-size: 23px;
+        }
+
+        .tb{
+            height: 25px;
+            width: 200px;
+            border: 2px solid #033249;
+            font-weight: bold;
+        }
+
+        .forgot{
+            position: absolute;
+            top: 153px;
+            left:270px;
+            font-size: 15px;   
+            text-decoration: none;
+            color: #033249;
+        }
+
+        .btn{
+            position: absolute;
+            height: 40px;
+            width: 105px;
+            top: 325px;
+            left: 37%;
+            font-size: 22px;
+            color: #033249;
+            border: 1px solid;
+            border-radius: 8px;
+        }
+
+        .btn:hover{
+            background-color: #033249;
+            color: #FFFFFF;
+            cursor: pointer;
+        }
+
+        .line{
+            position: absolute;
+            top: 380px;
+            left: 7%;
+            border:  0px  #033249;
+            display:inline-block;
+            width: 350px;
+            height: 1px;
+            background-color: #033249;
+        }
+
+        .ready{
+            position: absolute;
+            top: 385px;
+            left: 14%;
+        }
+
+        a{
+            text-decoration: none;
+            color: #033249;
+        }
+    </style>
+</head>
+<body bgcolor="#033249">
+    <div class="main_div">
+        <div class="log">
+            <p>Sign Up</p>
+        </div>
+        <div class="Sign_Up">
+            <table cellspacing="20" align="centre" cellpadding="8" border="0">
+                <tr>
+                    <td>Name :</td>
+                    <td><input type="text" placeholder="Enter your Name" id="id1" class="tb" /></td>
+                </tr>
+                <tr>
+                    <td>Email :</td>
+                    <td><input type="text" placeholder="Enter your Email Id" id="id2" class="tb"/></td>
+                </tr>
+                <tr>
+                    <td>Password :</td>
+                    <td><input type="password" placeholder="Enter your password" id="id3" class="tb"/></td>
+                </tr>
+                <tr>
+                    <td>Confirm Password :</td>
+                    <td><input type="password" placeholder="Confirm your password" id="id4" class="tb"/></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                     <input type="submit" value="Sign Up" onclick="signUp()" class="btn"/>
+                    </td>
+                </tr>
+                <hr class="line">
+                <div class="ready">
+                    <a href="login_page.html"><p>Already had an account?Login</p></a>
+                </div>
+            </table>
+        </div>
+    </div>
+    
+    <script>
+        function signUp()
+	{
+
+		var name= document.getElementById("id1").value;
+		var email= document.getElementById("id2").value;
+		var pwd= document.getElementById("id3").value;			
+		var cpwd= document.getElementById("id4").value;
+
+		if(name=='')
+		{
+			alert('Please enter your name');
+		}
+		else if(email=='')
+		{
+			alert('Please enter your user email id');
+		}
+		else if(pwd=='')
+		{
+			alert('Please enter Password');
+		}
+		else if(cpwd=='')
+		{
+			alert('Enter Confirm Password');
+		}
+		else if(pwd != cpwd)
+		{
+			alert ('Password not Matched');
+		}
+		else if(document.getElementById("id4").value.length < 6)
+		{
+			alert ('Password minimum length is 6');
+		}
+		else if(document.getElementById("id4").value.length > 6)
+		{
+			alert ('Password max length is 6');
+		}
+		else
+		{				                            
+            window.location.href ="home.html";  
+		}
+	}
+    </script>
+    
+    
+   
+</body>
+</html>
